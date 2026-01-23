@@ -23,6 +23,7 @@ setup(
             "test_pose_publisher = karate_robot_bridge.test_pose_publisher:main",
             "reflex_guard = karate_robot_bridge.reflex_guard:main",
             "strategist_node = karate_robot_bridge.strategist_node:main",
+            "training_env = karate_robot_bridge.training_env_node:main",
         ],
     },
 )

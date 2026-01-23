@@ -20,6 +20,7 @@ setup(
                 "launch/sensei_phase1.launch.py",
                 "launch/sensei_phase2.launch.py",
                 "launch/sensei_phase3.launch.py",
+                "launch/sensei_phase4.launch.py",
                 "launch/sensei_rviz.launch.py",
             ],
         ),
