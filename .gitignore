@@ -4,6 +4,8 @@
 simulation/ros2/build/
 simulation/ros2/install/
 simulation/ros2/log/
+.ros/
+.ros_logs/
 
 # Python cache
 **/__pycache__/

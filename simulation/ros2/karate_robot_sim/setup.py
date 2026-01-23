@@ -17,6 +17,9 @@ setup(
                 "launch/sensei_full.launch.py",
                 "launch/sensei_full_body.launch.py",
                 "launch/sensei_phase0.launch.py",
+                "launch/sensei_phase1.launch.py",
+                "launch/sensei_phase2.launch.py",
+                "launch/sensei_phase3.launch.py",
                 "launch/sensei_rviz.launch.py",
             ],
         ),
@@ -45,6 +48,8 @@ setup(
     license="Apache-2.0",
     tests_require=["pytest"],
     entry_points={
-        "console_scripts": [],
+        "console_scripts": [
+            "test_left_arm_publisher=karate_robot_sim.test_left_arm_publisher:main",
+        ],
     },
 )

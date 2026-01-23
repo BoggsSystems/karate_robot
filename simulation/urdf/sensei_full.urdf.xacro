@@ -17,4 +17,26 @@
   <xacro:sensei_leg_left parent="base_link"/>
   <xacro:sensei_leg_right parent="base_link"/>
   <xacro:sensei_head parent="base_link"/>
+
+  <!-- Phase 1: minimal ros2_control wiring for the left arm. -->
+  <ros2_control name="SenseiSim" type="system">
+    <hardware>
+      <plugin>mock_components/GenericSystem</plugin>
+    </hardware>
+    <joint name="l_shoulder_pan">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="l_shoulder_lift">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="l_elbow_flex">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
 </robot>

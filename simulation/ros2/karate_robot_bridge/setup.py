@@ -21,6 +21,8 @@ setup(
         "console_scripts": [
             "register_bridge = karate_robot_bridge.register_bridge:main",
             "test_pose_publisher = karate_robot_bridge.test_pose_publisher:main",
+            "reflex_guard = karate_robot_bridge.reflex_guard:main",
+            "strategist_node = karate_robot_bridge.strategist_node:main",
         ],
     },
 )

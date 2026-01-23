@@ -5,16 +5,12 @@ controller_manager:
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
-    arm_controller:
+    left_arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
       joints:
-        - shoulder_pan
-        - shoulder_lift
-        - upper_arm_roll
-        - elbow_flex
-        - forearm_roll
-        - wrist_flex
-        - wrist_roll
+        - l_shoulder_pan
+        - l_shoulder_lift
+        - l_elbow_flex
       command_interfaces:
         - position
       state_interfaces:

@@ -23,6 +23,10 @@ Visualization Manager:
       Show Names: true
       Show Arrows: true
       Frame Timeout: 5.0
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: ReflexGuard
+      Marker Topic: /reflex_guard/status_marker
     - Class: rviz_default_plugins/Grid
       Enabled: true
       Name: Grid
