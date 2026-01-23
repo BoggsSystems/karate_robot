@@ -1,0 +1,12 @@
+.DS_Store
+
+# ROS 2 / colcon build artifacts
+simulation/ros2/build/
+simulation/ros2/install/
+simulation/ros2/log/
+
+# Python cache
+**/__pycache__/
+*.pyc
+*.pyo
+*.egg-info/

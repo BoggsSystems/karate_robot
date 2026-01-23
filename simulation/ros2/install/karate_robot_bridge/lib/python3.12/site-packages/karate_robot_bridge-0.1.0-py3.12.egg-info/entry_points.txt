@@ -1,3 +1,0 @@
-[console_scripts]
-register_bridge = karate_robot_bridge.register_bridge:main
-test_pose_publisher = karate_robot_bridge.test_pose_publisher:main

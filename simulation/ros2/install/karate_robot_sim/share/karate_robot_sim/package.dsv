@@ -1,6 +1,0 @@
-source;share/karate_robot_sim/hook/pythonpath.ps1
-source;share/karate_robot_sim/hook/pythonpath.dsv
-source;share/karate_robot_sim/hook/pythonpath.sh
-source;share/karate_robot_sim/hook/ament_prefix_path.ps1
-source;share/karate_robot_sim/hook/ament_prefix_path.dsv
-source;share/karate_robot_sim/hook/ament_prefix_path.sh
