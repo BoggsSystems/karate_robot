@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="sensei_world">
+    <gravity>0 0 -9.8</gravity>
+  </world>
+</sdf>

@@ -1,0 +1,33 @@
+[1.056s] Invoking command in '/Users/jeffboggs/karate_robot/simulation/ros2/karate_robot_bridge': CONDA_PROMPT_MODIFIER=(ros2) PYTHONPATH=/Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/prefix_override:/Users/jeffboggs/miniforge3/envs/ros2/lib/python3.11/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/lib/python3.11/site-packages:${PYTHONPATH} SHLVL=3 _=/usr/bin/env /Users/jeffboggs/miniforge3/envs/ros2/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/karate_robot_bridge build --build-base /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/build install --record /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/install.log --single-version-externally-managed install_data
+[1.291s] /Users/jeffboggs/miniforge3/envs/ros2/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[1.292s]   warnings.warn(msg)
+[1.391s] running egg_info
+[1.408s] writing ../build/karate_robot_bridge/karate_robot_bridge.egg-info/PKG-INFO
+[1.409s] writing dependency_links to ../build/karate_robot_bridge/karate_robot_bridge.egg-info/dependency_links.txt
+[1.409s] writing entry points to ../build/karate_robot_bridge/karate_robot_bridge.egg-info/entry_points.txt
+[1.409s] writing requirements to ../build/karate_robot_bridge/karate_robot_bridge.egg-info/requires.txt
+[1.409s] writing top-level names to ../build/karate_robot_bridge/karate_robot_bridge.egg-info/top_level.txt
+[1.430s] reading manifest file '../build/karate_robot_bridge/karate_robot_bridge.egg-info/SOURCES.txt'
+[1.431s] writing manifest file '../build/karate_robot_bridge/karate_robot_bridge.egg-info/SOURCES.txt'
+[1.431s] running build
+[1.431s] running build_py
+[1.431s] copying karate_robot_bridge/register_bridge.py -> /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/build/lib/karate_robot_bridge
+[1.432s] copying karate_robot_bridge/__init__.py -> /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/build/lib/karate_robot_bridge
+[1.433s] copying karate_robot_bridge/test_pose_publisher.py -> /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/build/lib/karate_robot_bridge
+[1.435s] running install
+[1.439s] running install_lib
+[1.451s] copying /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/build/lib/karate_robot_bridge/register_bridge.py -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/lib/python3.11/site-packages/karate_robot_bridge
+[1.452s] copying /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/build/lib/karate_robot_bridge/test_pose_publisher.py -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/lib/python3.11/site-packages/karate_robot_bridge
+[1.453s] byte-compiling /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/lib/python3.11/site-packages/karate_robot_bridge/register_bridge.py to register_bridge.cpython-311.pyc
+[1.455s] byte-compiling /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/lib/python3.11/site-packages/karate_robot_bridge/test_pose_publisher.py to test_pose_publisher.cpython-311.pyc
+[1.456s] running install_data
+[1.457s] copying resource/karate_robot_bridge -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/share/ament_index/resource_index/packages
+[1.461s] copying package.xml -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/share/karate_robot_bridge
+[1.461s] running install_egg_info
+[1.471s] removing '/Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/lib/python3.11/site-packages/karate_robot_bridge-0.1.0-py3.11.egg-info' (and everything under it)
+[1.471s] Copying ../build/karate_robot_bridge/karate_robot_bridge.egg-info to /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/lib/python3.11/site-packages/karate_robot_bridge-0.1.0-py3.11.egg-info
+[1.474s] running install_scripts
+[1.567s] Installing register_bridge script to /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/lib/karate_robot_bridge
+[1.567s] Installing test_pose_publisher script to /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/lib/karate_robot_bridge
+[1.567s] writing list of installed files to '/Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/install.log'
+[1.595s] Invoked command in '/Users/jeffboggs/karate_robot/simulation/ros2/karate_robot_bridge' returned '0': CONDA_PROMPT_MODIFIER=(ros2) PYTHONPATH=/Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/prefix_override:/Users/jeffboggs/miniforge3/envs/ros2/lib/python3.11/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_bridge/lib/python3.11/site-packages:${PYTHONPATH} SHLVL=3 _=/usr/bin/env /Users/jeffboggs/miniforge3/envs/ros2/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/karate_robot_bridge build --build-base /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/build install --record /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_bridge/install.log --single-version-externally-managed install_data

@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: karate_robot_sim
+Version: 0.1.0
+Summary: Simulation scaffolding for the Karate Robot.
+Maintainer: karate_robot
+Maintainer-email: dev@karate-robot.local
+License: Apache-2.0
+Requires-Dist: setuptools
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary

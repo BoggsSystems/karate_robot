@@ -1,0 +1,36 @@
+[0.583s] Invoking command in '/Users/jeffboggs/karate_robot/simulation/ros2/karate_robot_sim': PYTHONPATH=/Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/prefix_override:/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/lib/python3.12/site-packages: SHLVL=2 _=/usr/bin/env /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/karate_robot_sim build --build-base /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/build install --record /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/install.log --single-version-externally-managed install_data
+[0.685s] /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.685s]   warnings.warn(msg)
+[0.743s] running egg_info
+[0.753s] creating ../build/karate_robot_sim/karate_robot_sim.egg-info
+[0.753s] writing ../build/karate_robot_sim/karate_robot_sim.egg-info/PKG-INFO
+[0.754s] writing dependency_links to ../build/karate_robot_sim/karate_robot_sim.egg-info/dependency_links.txt
+[0.755s] writing requirements to ../build/karate_robot_sim/karate_robot_sim.egg-info/requires.txt
+[0.755s] writing top-level names to ../build/karate_robot_sim/karate_robot_sim.egg-info/top_level.txt
+[0.755s] writing manifest file '../build/karate_robot_sim/karate_robot_sim.egg-info/SOURCES.txt'
+[0.775s] reading manifest file '../build/karate_robot_sim/karate_robot_sim.egg-info/SOURCES.txt'
+[0.775s] writing manifest file '../build/karate_robot_sim/karate_robot_sim.egg-info/SOURCES.txt'
+[0.775s] running build
+[0.775s] running build_py
+[0.775s] creating /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/build/lib/karate_robot_sim
+[0.776s] copying karate_robot_sim/__init__.py -> /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/build/lib/karate_robot_sim
+[0.776s] running install
+[0.779s] running install_lib
+[0.789s] creating /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/lib/python3.12/site-packages/karate_robot_sim
+[0.789s] copying /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/build/lib/karate_robot_sim/__init__.py -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/lib/python3.12/site-packages/karate_robot_sim
+[0.789s] byte-compiling /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/lib/python3.12/site-packages/karate_robot_sim/__init__.py to __init__.cpython-312.pyc
+[0.790s] running install_data
+[0.790s] creating /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/ament_index/resource_index/packages
+[0.790s] copying resource/karate_robot_sim -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/ament_index/resource_index/packages
+[0.790s] copying package.xml -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim
+[0.791s] creating /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim/launch
+[0.791s] copying launch/sensei_sim.launch.py -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim/launch
+[0.791s] copying launch/sensei_gazebo.launch.py -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim/launch
+[0.791s] copying launch/sensei_full.launch.py -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim/launch
+[0.792s] creating /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim/config
+[0.792s] copying config/ros2_controllers.yaml -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim/config
+[0.792s] running install_egg_info
+[0.802s] Copying ../build/karate_robot_sim/karate_robot_sim.egg-info to /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/lib/python3.12/site-packages/karate_robot_sim-0.1.0-py3.12.egg-info
+[0.804s] running install_scripts
+[0.872s] writing list of installed files to '/Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/install.log'
+[0.890s] Invoked command in '/Users/jeffboggs/karate_robot/simulation/ros2/karate_robot_sim' returned '0': PYTHONPATH=/Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/prefix_override:/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/lib/python3.12/site-packages: SHLVL=2 _=/usr/bin/env /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/karate_robot_sim build --build-base /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/build install --record /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/install.log --single-version-externally-managed install_data

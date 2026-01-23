@@ -1,0 +1,29 @@
+[0.633s] Invoking command in '/Users/jeffboggs/karate_robot/simulation/ros2/karate_robot_sim': CONDA_PROMPT_MODIFIER=(ros2) PYTHONPATH=/Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/prefix_override:/Users/jeffboggs/miniforge3/envs/ros2/lib/python3.11/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/lib/python3.11/site-packages:${PYTHONPATH} SHLVL=3 _=/usr/bin/env /Users/jeffboggs/miniforge3/envs/ros2/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/karate_robot_sim build --build-base /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/build install --record /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/install.log --single-version-externally-managed install_data
+[0.734s] /Users/jeffboggs/miniforge3/envs/ros2/lib/python3.11/site-packages/setuptools/_distutils/dist.py:289: UserWarning: Unknown distribution option: 'tests_require'
+[0.734s]   warnings.warn(msg)
+[0.784s] running egg_info
+[0.791s] writing ../build/karate_robot_sim/karate_robot_sim.egg-info/PKG-INFO
+[0.792s] writing dependency_links to ../build/karate_robot_sim/karate_robot_sim.egg-info/dependency_links.txt
+[0.792s] writing requirements to ../build/karate_robot_sim/karate_robot_sim.egg-info/requires.txt
+[0.792s] writing top-level names to ../build/karate_robot_sim/karate_robot_sim.egg-info/top_level.txt
+[0.808s] reading manifest file '../build/karate_robot_sim/karate_robot_sim.egg-info/SOURCES.txt'
+[0.809s] writing manifest file '../build/karate_robot_sim/karate_robot_sim.egg-info/SOURCES.txt'
+[0.809s] running build
+[0.809s] running build_py
+[0.809s] copying karate_robot_sim/__init__.py -> /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/build/lib/karate_robot_sim
+[0.810s] running install
+[0.813s] running install_lib
+[0.821s] running install_data
+[0.821s] copying resource/karate_robot_sim -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/ament_index/resource_index/packages
+[0.822s] copying package.xml -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim
+[0.822s] copying launch/sensei_sim.launch.py -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim/launch
+[0.823s] copying launch/sensei_gazebo.launch.py -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim/launch
+[0.823s] copying launch/sensei_full.launch.py -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim/launch
+[0.823s] copying config/ros2_controllers.yaml -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim/config
+[0.824s] copying urdf/sensei_arm.urdf.xacro -> /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/share/karate_robot_sim/urdf
+[0.824s] running install_egg_info
+[0.832s] removing '/Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/lib/python3.11/site-packages/karate_robot_sim-0.1.0-py3.11.egg-info' (and everything under it)
+[0.833s] Copying ../build/karate_robot_sim/karate_robot_sim.egg-info to /Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/lib/python3.11/site-packages/karate_robot_sim-0.1.0-py3.11.egg-info
+[0.835s] running install_scripts
+[0.894s] writing list of installed files to '/Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/install.log'
+[0.912s] Invoked command in '/Users/jeffboggs/karate_robot/simulation/ros2/karate_robot_sim' returned '0': CONDA_PROMPT_MODIFIER=(ros2) PYTHONPATH=/Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/prefix_override:/Users/jeffboggs/miniforge3/envs/ros2/lib/python3.11/site-packages/colcon_core/task/python/colcon_distutils_commands:/Users/jeffboggs/karate_robot/simulation/ros2/install/karate_robot_sim/lib/python3.11/site-packages:${PYTHONPATH} SHLVL=3 _=/usr/bin/env /Users/jeffboggs/miniforge3/envs/ros2/bin/python -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/karate_robot_sim build --build-base /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/build install --record /Users/jeffboggs/karate_robot/simulation/ros2/build/karate_robot_sim/install.log --single-version-externally-managed install_data
