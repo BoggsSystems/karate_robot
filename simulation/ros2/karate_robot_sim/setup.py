@@ -16,6 +16,7 @@ setup(
                 "launch/sensei_gazebo.launch.py",
                 "launch/sensei_full.launch.py",
                 "launch/sensei_full_body.launch.py",
+                "launch/sensei_phase0.launch.py",
                 "launch/sensei_rviz.launch.py",
             ],
         ),

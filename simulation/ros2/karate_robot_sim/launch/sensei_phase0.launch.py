@@ -13,6 +13,7 @@ def generate_launch_description():
     package_share = Path(get_package_share_directory("karate_robot_sim"))
     urdf_path = package_share / "urdf" / "sensei_full.urdf.xacro"
     world_path = package_share / "worlds" / "empty.sdf"
+    rviz_config = package_share / "rviz" / "sensei.rviz"
     robot_description = xacro.process_file(str(urdf_path)).toxml()
 
     gz_sim = IncludeLaunchDescription(
@@ -32,6 +33,20 @@ def generate_launch_description():
         parameters=[{"robot_description": robot_description, "use_sim_time": True}],
     )
 
+    joint_state_publisher = Node(
+        package="joint_state_publisher",
+        executable="joint_state_publisher",
+        output="screen",
+        parameters=[{"robot_description": robot_description, "use_sim_time": True}],
+    )
+
+    rviz = Node(
+        package="rviz2",
+        executable="rviz2",
+        output="screen",
+        arguments=["-d", str(rviz_config)],
+    )
+
     spawn_entity = Node(
         package="ros_gz_sim",
         executable="create",
@@ -48,4 +63,12 @@ def generate_launch_description():
         output="screen",
     )
 
-    return LaunchDescription([gz_sim, robot_state_publisher, spawn_entity])
+    return LaunchDescription(
+        [
+            gz_sim,
+            robot_state_publisher,
+            joint_state_publisher,
+            spawn_entity,
+            rviz,
+        ]
+    )
