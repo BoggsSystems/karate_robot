@@ -21,7 +21,7 @@
   <!-- Phase 1: minimal ros2_control wiring for the left arm. -->
   <ros2_control name="SenseiSim" type="system">
     <hardware>
-      <plugin>mock_components/GenericSystem</plugin>
+    <plugin>fake_components/GenericSystem</plugin>
     </hardware>
     <joint name="l_shoulder_pan">
       <command_interface name="position"/>
@@ -34,6 +34,21 @@
       <state_interface name="velocity"/>
     </joint>
     <joint name="l_elbow_flex">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="r_hip_pitch">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="r_knee_pitch">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="r_ankle_pitch">
       <command_interface name="position"/>
       <state_interface name="position"/>
       <state_interface name="velocity"/>

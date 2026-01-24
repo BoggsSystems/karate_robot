@@ -21,6 +21,8 @@ setup(
                 "launch/sensei_phase2.launch.py",
                 "launch/sensei_phase3.launch.py",
                 "launch/sensei_phase4.launch.py",
+                "launch/sensei_phase5.launch.py",
+                "launch/sensei_control_min.launch.py",
                 "launch/sensei_rviz.launch.py",
             ],
         ),

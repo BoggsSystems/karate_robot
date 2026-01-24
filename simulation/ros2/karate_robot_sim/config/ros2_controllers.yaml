@@ -16,3 +16,15 @@ controller_manager:
       state_interfaces:
         - position
         - velocity
+
+    right_leg_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+      joints:
+        - r_hip_pitch
+        - r_knee_pitch
+        - r_ankle_pitch
+      command_interfaces:
+        - position
+      state_interfaces:
+        - position
+        - velocity

@@ -24,6 +24,8 @@ setup(
             "reflex_guard = karate_robot_bridge.reflex_guard:main",
             "strategist_node = karate_robot_bridge.strategist_node:main",
             "training_env = karate_robot_bridge.training_env_node:main",
+            "kick_sequence = karate_robot_bridge.kick_sequence_node:main",
+            "desired_pose_joint_state = karate_robot_bridge.desired_pose_joint_state:main",
         ],
     },
 )
