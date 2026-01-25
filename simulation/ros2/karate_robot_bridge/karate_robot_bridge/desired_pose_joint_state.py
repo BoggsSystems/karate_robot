@@ -35,7 +35,9 @@ class DesiredPoseJointState(Node):
                 "neck_tilt",
             ],
         )
+        self.declare_parameter("publish_rate_hz", 10.0)
         self.joint_names: List[str] = list(self.get_parameter("joint_names").value)
+        self.publish_rate_hz = float(self.get_parameter("publish_rate_hz").value)
         self.last_positions = [0.0] * len(self.joint_names)
 
         self.publisher = self.create_publisher(JointState, "joint_states", 10)
@@ -44,6 +46,7 @@ class DesiredPoseJointState(Node):
         )
 
         self.publish_joint_state(self.last_positions)
+        self.timer = self.create_timer(1.0 / self.publish_rate_hz, self.on_timer)
         self.get_logger().info("Desired pose joint state fallback online.")
 
     def on_desired_pose(self, msg: Float64MultiArray) -> None:
@@ -64,6 +67,9 @@ class DesiredPoseJointState(Node):
         joint_state.name = list(self.joint_names)
         joint_state.position = list(positions)
         self.publisher.publish(joint_state)
+
+    def on_timer(self) -> None:
+        self.publish_joint_state(self.last_positions)
 
 
 def main() -> None:

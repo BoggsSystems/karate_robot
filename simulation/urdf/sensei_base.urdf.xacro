@@ -1,29 +1,38 @@
 <?xml version="1.0"?>
 <!--
   Base module for 1-foot Sensei robot.
-  Compact torso with mounting frames for limbs and head.
+  Humanoid torso with pelvis and chest volumes.
 -->
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
   <xacro:macro name="sensei_base" params="base_link">
     <link name="${base_link}">
       <inertial>
-        <mass value="1.2"/>
-        <origin xyz="0 0 0.055" rpy="0 0 0"/>
-        <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+        <mass value="2.4"/>
+        <origin xyz="0 0 0.12" rpy="0 0 0"/>
+        <inertia ixx="0.03" ixy="0" ixz="0" iyy="0.04" iyz="0" izz="0.03"/>
       </inertial>
       <visual>
-        <origin xyz="0 0 0.055" rpy="0 0 0"/>
+        <origin xyz="0 0 0.06" rpy="0 0 0"/>
         <geometry>
-          <cylinder radius="0.06" length="0.11"/>
+          <box size="0.18 0.12 0.08"/>
+        </geometry>
+        <material name="pelvis_gray">
+          <color rgba="0.45 0.45 0.45 1.0"/>
+        </material>
+      </visual>
+      <visual>
+        <origin xyz="0 0 0.15" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.2 0.14 0.1"/>
         </geometry>
         <material name="torso_gray">
           <color rgba="0.5 0.5 0.5 1.0"/>
         </material>
       </visual>
       <collision>
-        <origin xyz="0 0 0.055" rpy="0 0 0"/>
+        <origin xyz="0 0 0.12" rpy="0 0 0"/>
         <geometry>
-          <cylinder radius="0.06" length="0.11"/>
+          <box size="0.2 0.14 0.18"/>
         </geometry>
       </collision>
     </link>

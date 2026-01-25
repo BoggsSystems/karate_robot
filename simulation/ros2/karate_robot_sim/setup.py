@@ -22,8 +22,11 @@ setup(
                 "launch/sensei_phase3.launch.py",
                 "launch/sensei_phase4.launch.py",
                 "launch/sensei_phase5.launch.py",
+                "launch/sensei_phase6.launch.py",
                 "launch/sensei_control_min.launch.py",
                 "launch/sensei_rviz.launch.py",
+                "launch/sensei_static_rviz.launch.py",
+                "launch/sensei_start_pose.launch.py",
             ],
         ),
         ("share/" + package_name + "/config", ["config/ros2_controllers.yaml"]),
@@ -43,7 +46,7 @@ setup(
         ("share/" + package_name + "/rviz", ["rviz/sensei.rviz"]),
         ("share/" + package_name + "/worlds", ["worlds/empty.sdf"]),
     ],
-    install_requires=["setuptools"],
+    install_requires=["setuptools", "pyyaml"],
     zip_safe=True,
     maintainer="karate_robot",
     maintainer_email="dev@karate-robot.local",
@@ -53,6 +56,8 @@ setup(
     entry_points={
         "console_scripts": [
             "test_left_arm_publisher=karate_robot_sim.test_left_arm_publisher:main",
+            "sim_model_check=karate_robot_sim.model_checks:main",
+            "sim_smoke=karate_robot_sim.smoke_sim:main",
         ],
     },
 )

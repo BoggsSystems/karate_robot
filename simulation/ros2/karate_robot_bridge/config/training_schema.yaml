@@ -1,0 +1,48 @@
+schema_version: 1
+observations:
+  layout:
+    - joint_positions
+    - safety_latch
+    - strategist_state_id
+  joint_units: radians
+  safety_latch:
+    type: uint8
+    meaning: 0 = ok, 1 = safety halt latched
+  strategist_state_id:
+    order: [MOKUSO, REI, KAMAE, MIMIC, SAFETY_HALT]
+actions:
+  type: float64_array
+  layout: joint_targets
+  joint_units: radians
+  description: absolute joint targets matching joint_names order
+reward:
+  hip_target: 0.7
+  knee_target: -0.2
+  ankle_target: 0.1
+  weights:
+    hip: 0.6
+    knee: 0.9
+    ankle: 0.2
+  safety_latch_penalty: -1.0
+  velocity_penalty: 0.0
+  success_reward: 1.0
+done:
+  conditions:
+    - safety_latch == 1
+    - kick_goal reached
+    - episode_timeout_sec elapsed (if > 0)
+joint_names:
+  - l_shoulder_pan
+  - l_shoulder_lift
+  - l_elbow_flex
+  - r_shoulder_pan
+  - r_shoulder_lift
+  - r_elbow_flex
+  - l_hip_pitch
+  - l_knee_pitch
+  - l_ankle_pitch
+  - r_hip_pitch
+  - r_knee_pitch
+  - r_ankle_pitch
+  - neck_pan
+  - neck_tilt

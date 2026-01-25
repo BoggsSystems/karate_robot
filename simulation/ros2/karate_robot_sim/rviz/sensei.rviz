@@ -16,12 +16,15 @@ Visualization Manager:
       Enabled: true
       Name: RobotModel
       Robot Description: robot_description
+      Visual Enabled: true
+      Collision Enabled: false
+      Alpha: 1
     - Class: rviz_default_plugins/TF
       Enabled: true
       Name: TF
-      Show Axes: true
-      Show Names: true
-      Show Arrows: true
+      Show Axes: false
+      Show Names: false
+      Show Arrows: false
       Frame Timeout: 5.0
     - Class: rviz_default_plugins/Marker
       Enabled: true
@@ -44,11 +47,11 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.8
+      Distance: 0.6
       Focal Point:
         X: 0.0
         Y: 0.0
-        Z: 0.2
+        Z: 0.12
       Name: Current View
-      Pitch: 0.7
-      Yaw: 1.3
+      Pitch: 0.6
+      Yaw: 1.2

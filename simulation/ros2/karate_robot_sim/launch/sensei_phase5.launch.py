@@ -33,12 +33,6 @@ def generate_launch_description():
         parameters=[{"spike_after_sec": 12.0}],
     )
 
-    kick_sequence = Node(
-        package="karate_robot_bridge",
-        executable="kick_sequence",
-        output="screen",
-    )
-
     training_env = Node(
         package="karate_robot_bridge",
         executable="training_env",
@@ -82,7 +76,6 @@ def generate_launch_description():
             ),
             register_bridge,
             reflex_guard,
-            kick_sequence,
             desired_pose_joint_state,
             training_env,
         ]
