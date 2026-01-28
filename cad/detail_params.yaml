@@ -1,0 +1,40 @@
+# Detail params for Fusion generators (TorsoMain, LimbTubeWithChannel, FootWithFSR).
+# Scripts read this when present; otherwise use built-in defaults.
+# Units: mm unless noted.
+
+torso_main:
+  outer_mm: [200, 140, 100]   # W x D x H (X x Y x Z), origin at bottom-center
+  cavity_mm: [100, 80, 40]    # internal electronics bay
+  open_front: true
+  wall_mm: 3
+  pi_boss:
+    size_mm: [85, 56]
+    hole_spacing_mm: [58, 49]  # Pi 4 mounting holes
+    standoff_mm: 10
+    hole_d_mm: 2.7
+  teensy_boss:
+    size_mm: [60, 18]
+    standoff_mm: 6
+    hole_d_mm: 2
+  battery_tray_mm: [105, 35, 20]
+  cable_passthrough_d_mm: 8
+
+limb_channel:
+  width_mm: 8
+  depth_mm: 4
+  links:
+    - l_upper_arm_link
+    - l_forearm_link
+    - r_upper_arm_link
+    - r_forearm_link
+    - l_thigh_link
+    - l_shin_link
+    - r_thigh_link
+    - r_shin_link
+
+foot_fsr:
+  size_mm: [100, 60, 30]   # L x W x H; +X = toe
+  fsr_diameter_mm: 10
+  fsr_pocket_depth_mm: 2
+  ball_offset_from_toe_mm: 25
+  heel_offset_from_heel_mm: 25

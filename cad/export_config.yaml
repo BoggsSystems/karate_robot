@@ -1,0 +1,50 @@
+# Export config for Fusion 360 export_to_cad script
+# Maps Fusion component names to output paths under cad/ (relative to cad/ root)
+# Paths use forward slashes. Part paths under parts/<subdir>/<name>.stl
+# Run from Fusion 360: Scripts and Add-Ins > export_to_cad
+
+assembly:
+  step: assemblies/sensei_full.step
+
+# Component name (in Fusion) -> path under cad/ e.g. parts/torso/torso_main.stl
+parts:
+  # Torso
+  torso_main: parts/torso/torso_main.stl
+  torso_back_cover: parts/torso/torso_back_cover.stl
+  battery_door: parts/torso/battery_door.stl
+  shoulder_mount_L: parts/torso/shoulder_mount_L.stl
+  shoulder_mount_R: parts/torso/shoulder_mount_R.stl
+  # Left arm
+  shoulder_bracket_L: parts/arm_left/shoulder_bracket_L.stl
+  upper_arm_L: parts/arm_left/upper_arm_L.stl
+  elbow_bracket_L: parts/arm_left/elbow_bracket_L.stl
+  forearm_L: parts/arm_left/forearm_L.stl
+  hand_L: parts/arm_left/hand_L.stl
+  # Right arm
+  shoulder_bracket_R: parts/arm_right/shoulder_bracket_R.stl
+  upper_arm_R: parts/arm_right/upper_arm_R.stl
+  elbow_bracket_R: parts/arm_right/elbow_bracket_R.stl
+  forearm_R: parts/arm_right/forearm_R.stl
+  hand_R: parts/arm_right/hand_R.stl
+  # Left leg
+  hip_mount_L: parts/leg_left/hip_mount_L.stl
+  hip_bracket_L: parts/leg_left/hip_bracket_L.stl
+  thigh_L: parts/leg_left/thigh_L.stl
+  knee_bracket_L: parts/leg_left/knee_bracket_L.stl
+  shin_L: parts/leg_left/shin_L.stl
+  ankle_bracket_L: parts/leg_left/ankle_bracket_L.stl
+  foot_L: parts/leg_left/foot_L.stl
+  # Right leg
+  hip_mount_R: parts/leg_right/hip_mount_R.stl
+  hip_bracket_R: parts/leg_right/hip_bracket_R.stl
+  thigh_R: parts/leg_right/thigh_R.stl
+  knee_bracket_R: parts/leg_right/knee_bracket_R.stl
+  shin_R: parts/leg_right/shin_R.stl
+  ankle_bracket_R: parts/leg_right/ankle_bracket_R.stl
+  foot_R: parts/leg_right/foot_R.stl
+  # Head
+  head_shell: parts/head/head_shell.stl
+  neck_bracket: parts/head/neck_bracket.stl
+  camera_mount: parts/head/camera_mount.stl
+  # Optional: XL430 bracket generator output
+  xl430_bracket: parts/torso/xl430_bracket.stl

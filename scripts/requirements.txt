@@ -1,0 +1,2 @@
+# For scripts/urdf_to_cad_params.py
+PyYAML>=5.1

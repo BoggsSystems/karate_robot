@@ -1,0 +1,752 @@
+{
+  "parts": [
+    {
+      "name": "l_shoulder_link",
+      "type": "sphere",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.02
+      ],
+      "radius": 0.035
+    },
+    {
+      "name": "l_upper_arm_link",
+      "type": "cylinder",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.06
+      ],
+      "radius": 0.025,
+      "length": 0.12
+    },
+    {
+      "name": "l_forearm_link",
+      "type": "cylinder",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.055
+      ],
+      "radius": 0.022,
+      "length": 0.11
+    },
+    {
+      "name": "l_hand_link",
+      "type": "box",
+      "origin_xyz": [
+        0.02,
+        0.0,
+        -0.02
+      ],
+      "size": [
+        0.06,
+        0.04,
+        0.03
+      ]
+    },
+    {
+      "name": "r_shoulder_link",
+      "type": "sphere",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.02
+      ],
+      "radius": 0.035
+    },
+    {
+      "name": "r_upper_arm_link",
+      "type": "cylinder",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.06
+      ],
+      "radius": 0.025,
+      "length": 0.12
+    },
+    {
+      "name": "r_forearm_link",
+      "type": "cylinder",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.055
+      ],
+      "radius": 0.022,
+      "length": 0.11
+    },
+    {
+      "name": "r_hand_link",
+      "type": "box",
+      "origin_xyz": [
+        0.02,
+        0.0,
+        -0.02
+      ],
+      "size": [
+        0.06,
+        0.04,
+        0.03
+      ]
+    },
+    {
+      "name": "base_link",
+      "type": "box",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.06
+      ],
+      "size": [
+        0.18,
+        0.12,
+        0.08
+      ]
+    },
+    {
+      "name": "neck_link",
+      "type": "cylinder",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.03
+      ],
+      "radius": 0.025,
+      "length": 0.06
+    },
+    {
+      "name": "head_link",
+      "type": "sphere",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.065
+      ],
+      "radius": 0.065
+    },
+    {
+      "name": "l_hip_link",
+      "type": "cylinder",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.07
+      ],
+      "radius": 0.03,
+      "length": 0.14
+    },
+    {
+      "name": "l_thigh_link",
+      "type": "cylinder",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.06
+      ],
+      "radius": 0.028,
+      "length": 0.12
+    },
+    {
+      "name": "l_shin_link",
+      "type": "cylinder",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.03
+      ],
+      "radius": 0.025,
+      "length": 0.06
+    },
+    {
+      "name": "l_foot_link",
+      "type": "box",
+      "origin_xyz": [
+        0.05,
+        0.0,
+        -0.015
+      ],
+      "size": [
+        0.1,
+        0.04,
+        0.03
+      ]
+    },
+    {
+      "name": "r_hip_link",
+      "type": "cylinder",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.07
+      ],
+      "radius": 0.03,
+      "length": 0.14
+    },
+    {
+      "name": "r_thigh_link",
+      "type": "cylinder",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.06
+      ],
+      "radius": 0.028,
+      "length": 0.12
+    },
+    {
+      "name": "r_shin_link",
+      "type": "cylinder",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.03
+      ],
+      "radius": 0.025,
+      "length": 0.06
+    },
+    {
+      "name": "r_foot_link",
+      "type": "box",
+      "origin_xyz": [
+        0.05,
+        0.0,
+        -0.015
+      ],
+      "size": [
+        0.1,
+        0.04,
+        0.03
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "shoulder_pan",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "link_1",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.05
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "shoulder_lift",
+      "type": "revolute",
+      "parent": "link_1",
+      "child": "link_2",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.15
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "upper_arm_roll",
+      "type": "revolute",
+      "parent": "link_2",
+      "child": "link_3",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.24
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "elbow_flex",
+      "type": "revolute",
+      "parent": "link_3",
+      "child": "link_4",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.34
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "forearm_roll",
+      "type": "revolute",
+      "parent": "link_4",
+      "child": "link_5",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.42
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "wrist_flex",
+      "type": "revolute",
+      "parent": "link_5",
+      "child": "link_6",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "wrist_roll",
+      "type": "revolute",
+      "parent": "link_6",
+      "child": "link_7",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.56
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "l_shoulder_pan",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "l_shoulder_link",
+      "origin_xyz": [
+        0.0,
+        0.09,
+        0.18
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "l_shoulder_lift",
+      "type": "revolute",
+      "parent": "l_shoulder_link",
+      "child": "l_upper_arm_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.04
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "l_elbow_flex",
+      "type": "revolute",
+      "parent": "l_upper_arm_link",
+      "child": "l_forearm_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.12
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "l_hand_fixed",
+      "type": "fixed",
+      "parent": "l_forearm_link",
+      "child": "l_hand_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.11
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "r_shoulder_pan",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "r_shoulder_link",
+      "origin_xyz": [
+        0.0,
+        -0.09,
+        0.18
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "r_shoulder_lift",
+      "type": "revolute",
+      "parent": "r_shoulder_link",
+      "child": "r_upper_arm_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.04
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "r_elbow_flex",
+      "type": "revolute",
+      "parent": "r_upper_arm_link",
+      "child": "r_forearm_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.12
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "r_hand_fixed",
+      "type": "fixed",
+      "parent": "r_forearm_link",
+      "child": "r_hand_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.11
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "neck_pan",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "neck_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.2
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "neck_tilt",
+      "type": "revolute",
+      "parent": "neck_link",
+      "child": "head_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.06
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "l_hip_pitch",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "l_hip_link",
+      "origin_xyz": [
+        0.0,
+        0.06,
+        0.06
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "l_knee_pitch",
+      "type": "revolute",
+      "parent": "l_hip_link",
+      "child": "l_thigh_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.14
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "l_ankle_pitch",
+      "type": "revolute",
+      "parent": "l_thigh_link",
+      "child": "l_shin_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.12
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "l_foot_fixed",
+      "type": "fixed",
+      "parent": "l_shin_link",
+      "child": "l_foot_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.06
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "r_hip_pitch",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "r_hip_link",
+      "origin_xyz": [
+        0.0,
+        -0.06,
+        0.06
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "r_knee_pitch",
+      "type": "revolute",
+      "parent": "r_hip_link",
+      "child": "r_thigh_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.14
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "r_ankle_pitch",
+      "type": "revolute",
+      "parent": "r_thigh_link",
+      "child": "r_shin_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.12
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "name": "r_foot_fixed",
+      "type": "fixed",
+      "parent": "r_shin_link",
+      "child": "r_foot_link",
+      "origin_xyz": [
+        0.0,
+        0.0,
+        -0.06
+      ],
+      "origin_rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ]
+}
