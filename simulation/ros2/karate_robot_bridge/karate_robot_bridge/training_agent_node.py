@@ -179,7 +179,7 @@ class TrainingAgentNode(Node):
                 "action_mean_abs",
             ]
         )
-        self.get_logger().info("Logging to %s", str(log_path))
+        self.get_logger().info(f"Logging to {log_path}")
 
     def tick(self) -> None:
         if self.latest_done and self.reset_on_done and not self.last_reset_sent:

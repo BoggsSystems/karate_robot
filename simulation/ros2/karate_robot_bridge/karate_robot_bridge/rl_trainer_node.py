@@ -124,10 +124,18 @@ def build_env(bridge: TrainingBridge):
     schema = bridge.wait_for_schema()
     if schema:
         joint_names = schema.get("joint_names", [])
-        obs_size = len(joint_names) + 2
         action_size = len(joint_names)
+        obs_fields = (
+            schema.get("observations", {}).get("observation_fields", [])
+            if isinstance(schema.get("observations", {}), dict)
+            else []
+        )
+        if obs_fields:
+            obs_size = sum(int(field.get("size", 0)) for field in obs_fields)
+        else:
+            obs_size = len(joint_names) + 2
     else:
-        obs_size = 16
+        obs_size = 25
         action_size = 14
 
     class RosTrainingEnv(gym.Env):
@@ -172,29 +180,52 @@ def main() -> None:
     bridge.declare_parameter("total_timesteps", 20000)
     bridge.declare_parameter("model_path", "/tmp/karate_robot_policy")
     bridge.declare_parameter("log_dir", "/tmp/karate_robot_rl")
+    bridge.declare_parameter("checkpoint_freq", 100000)
+    bridge.declare_parameter("resume_path", "")
 
     algo = str(bridge.get_parameter("algo").value).upper()
     total_timesteps = int(bridge.get_parameter("total_timesteps").value)
     model_path = str(bridge.get_parameter("model_path").value)
     log_dir = str(bridge.get_parameter("log_dir").value)
+    checkpoint_freq = int(bridge.get_parameter("checkpoint_freq").value)
+    resume_path = str(bridge.get_parameter("resume_path").value)
 
     env = build_env(bridge)
 
     try:
         from stable_baselines3 import PPO, SAC
+        from stable_baselines3.common.callbacks import CheckpointCallback
     except ImportError as exc:
         raise RuntimeError(
             "stable-baselines3 is required. Install with: pip install stable-baselines3 gymnasium"
         ) from exc
 
-    if algo == "SAC":
-        model = SAC("MlpPolicy", env, verbose=1, tensorboard_log=log_dir)
-    else:
-        model = PPO("MlpPolicy", env, verbose=1, tensorboard_log=log_dir)
+    # Setup checkpoint callback
+    checkpoint_callback = CheckpointCallback(
+        save_freq=checkpoint_freq,
+        save_path=log_dir,
+        name_prefix="walk_checkpoint",
+        save_replay_buffer=False,
+        save_vecnormalize=True,
+    )
 
-    model.learn(total_timesteps=total_timesteps)
+    # Load existing model or create new one
+    if resume_path and resume_path.strip():
+        bridge.get_logger().info(f"Resuming from {resume_path}")
+        if algo == "SAC":
+            model = SAC.load(resume_path, env=env, tensorboard_log=log_dir)
+        else:
+            model = PPO.load(resume_path, env=env, tensorboard_log=log_dir)
+    else:
+        if algo == "SAC":
+            model = SAC("MlpPolicy", env, verbose=1, tensorboard_log=log_dir)
+        else:
+            model = PPO("MlpPolicy", env, verbose=1, tensorboard_log=log_dir)
+
+    bridge.get_logger().info(f"Starting training for {total_timesteps} timesteps...")
+    model.learn(total_timesteps=total_timesteps, callback=checkpoint_callback, progress_bar=True)
     model.save(model_path)
-    bridge.get_logger().info("Saved policy to %s", model_path)
+    bridge.get_logger().info(f"Saved final policy to {model_path}")
 
     bridge.destroy_node()
     rclpy.shutdown()

@@ -1,0 +1,42 @@
+# GPU-enabled Docker image for cloud training
+# Based on NVIDIA's PyTorch image with CUDA support
+
+FROM nvcr.io/nvidia/pytorch:23.10-py3
+
+# Install ROS 2 Humble
+RUN apt-get update && apt-get install -y software-properties-common curl gnupg lsb-release
+RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | apt-key add -
+RUN echo "deb http://packages.ros.org/ros2/ubuntu jammy main" > /etc/apt/sources.list.d/ros2.list
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-humble-ros-base \
+    ros-humble-ros-gz \
+    ros-humble-ros2-control \
+    ros-humble-ros2-controllers \
+    ros-humble-xacro \
+    ros-humble-robot-state-publisher \
+    python3-colcon-common-extensions \
+    && rm -rf /var/lib/apt/lists/*
+
+# RL dependencies (already have PyTorch from base image)
+RUN pip install --no-cache-dir \
+    stable-baselines3[extra] \
+    gymnasium \
+    tensorboard
+
+# Copy workspace
+WORKDIR /ros2_ws
+COPY simulation/ros2 /ros2_ws/src/
+
+# Build ROS 2 packages
+RUN /bin/bash -c "source /opt/ros/humble/setup.bash && \
+    colcon build --symlink-install"
+
+# Training entrypoint
+COPY cloud/gcp/train_entrypoint.sh /train_entrypoint.sh
+RUN chmod +x /train_entrypoint.sh
+
+ENV NVIDIA_VISIBLE_DEVICES=all
+ENV NVIDIA_DRIVER_CAPABILITIES=compute,utility
+
+ENTRYPOINT ["/train_entrypoint.sh"]
